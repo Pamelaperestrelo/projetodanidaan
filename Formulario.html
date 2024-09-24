@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+           background-image: url(DANI\ DAAN.png);   
+         
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .table-title {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .full-width {
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            max-width: 100px;
+            height: auto;
+        }
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ordem de Serviço <span id="orderNumber">#001</span></h1>
+
+    <form>
+        <label for="clientName">Nome do Cliente:</label><br>
+        <input type="text" id="clientName" name="clientName" class="full-width"><br><br>
+
+        <label><input type="radio" name="tipoManutencao" value="corretiva"> Manutenção Corretiva</label><br>
+        <label><input type="radio" name="tipoManutencao" value="preventiva"> Manutenção Preventiva dos objetos do contrato referente ao mês de <input type="text" name="mes" placeholder="Mês"></label><br><br>
+        
+
+        <p>Itens Verificados:</p>
+        <table class="full-width">
+            <thead>
+                <tr class="table-title">
+                    <th>Sim</th>
+                    <th>Não</th>                    <th>OBS</th>
+                    <th>Portões Automáticos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="caboAco" value="sim"></td>
+                    <td><input type="radio" name="caboAco" value="nao"></td>
+                    <td><input type="radio" name="caboAco" value="obs"></td>
+                    <td>Cabo de aço / Correntes</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="fotoCelula" value="sim"></td>
+                    <td><input type="radio" name="fotoCelula" value="nao"></td>
+                    <td><input type="radio" name="fotoCelula" value="obs"></td>
+                    <td>Foto célula / Sensores</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="centraisMotores" value="sim"></td>
+                    <td><input type="radio" name="centraisMotores" value="nao"></td>
+                    <td><input type="radio" name="centraisMotores" value="obs"></td>
+                    <td>Centrais / Motores</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="intertravamento" value="sim"></td>
+                    <td><input type="radio" name="intertravamento" value="nao"></td>
+                    <td><input type="radio" name="intertravamento" value="obs"></td>
+                    <td>Intertravamento</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="roldanas" value="sim"></td>
+                    <td><input type="radio" name="roldanas" value="nao"></td>
+                    <td><input type="radio" name="roldanas" value="obs"></td>
+                    <td>Roldanas / Trilhos / Guias / Cremalheiras</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="sinaleiros" value="sim"></td>
+                    <td><input type="radio" name="sinaleiros" value="nao"></td>
+                    <td><input type="radio" name="sinaleiros" value="obs"></td>
+                    <td>Sinaleiros / Bips</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="estrutura" value="sim"></td>
+                    <td><input type="radio" name="estrutura" value="nao"></td>
+                    <td><input type="radio" name="estrutura" value="obs"></td>
+                    <td>Estrutura do portão</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="receptores" value="sim"></td>
+                    <td><input type="radio" name="receptores" value="nao"></td>
+                    <td><input type="radio" name="receptores" value="obs"></td>
+                    <td>Receptores / Boteiras</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="fechadura" value="sim"></td>
+                    <td><input type="radio" name="fechadura" value="nao"></td>
+                    <td><input type="radio" name="fechadura" value="obs"></td>
+                    <td>Fechadura elétrica / Eletromagnéticas</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="molasAereas" value="sim"></td>
+                    <td><input type="radio" name="molasAereas" value="nao"></td>
+                    <td><input type="radio" name="molasAereas" value="obs"></td>
+                    <td>Molas aéreas / Pisos</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="nobreak" value="sim"></td>
+                    <td><input type="radio" name="nobreak" value="nao"></td>
+                    <td><input type="radio" name="nobreak" value="obs"></td>
+                    <td>Nobreak</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="leitoras" value="sim"></td>
+                    <td><input type="radio" name="leitoras" value="nao"></td>
+                    <td><input type="radio" name="leitoras" value="obs"></td>
+                    <td>Leitoras / Biometrias</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="cancelas" value="sim"></td>
+                    <td><input type="radio" name="cancelas" value="nao"></td>
+                    <td><input type="radio" name="cancelas" value="obs"></td>
+                    <td>Cancelas</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="cftv" value="sim"></td>
+                    <td><input type="radio" name="cftv" value="nao"></td>
+                    <td><input type="radio" name="cftv" value="obs"></td>
+                    <td>Sistema de CFTV</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="interfonia" value="sim"></td>
+                    <td><input type="radio" name="interfonia" value="nao"></td>
+                    <td><input type="radio" name="interfonia" value="obs"></td>
+                    <td>Sistema de Interfonia</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="cercas" value="sim"></td>
+                    <td><input type="radio" name="cercas" value="nao"></td>
+                    <td><input type="radio" name="cercas" value="obs"></td>
+                    <td>Cercas elétricas</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="outros" value="sim"></td>
+                    <td><input type="radio" name="outros" value="nao"></td>
+                    <td><input type="radio" name="outros" value="obs"></td>
+                    <td>Outros</td>
+                </tr>
+            </tbody>
+        </table><br><br>
+
+        <label for="servicosExecutados">Serviços Executados:</label><br>
+        <textarea id="servicosExecutados" name="servicosExecutados" class="full-width"></textarea><br><br>
+
+        <label for="observacoes">Observações:</label><br>
+        <textarea id="observacoes" name="observacoes" class="full-width"></textarea><br><br>
+
+        <p>Declaro que foram executados os serviços acima mencionados, pelo técnico responsável da empresa mantenedora.</p>
+
+        <label for="data">Data:</label><br>
+        <input type="date" id="data" name="data"><br><br>
+
+        <label for="nomeTecnico">Nome do Técnico:</label><br>
+        <input type="text" id="nomeTecnico" name="nomeTecnico" class="full-width"><br><br>
+
+        <label for="nomeAtendido">Nome de quem atendeu:</label><br>
+        <input type="text" id="nomeAtendido" name="nomeAtendido" class="full-width"><br><br>
+
+        <label for="rgAtendido">RG de quem atendeu:</label><br>
+        <input type="text" id="rgAtendido" name="rgAtendido" class="full-width"><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
